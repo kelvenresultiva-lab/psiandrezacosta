@@ -17,7 +17,7 @@ export default function Location() {
     {
       icon: MapPin,
       title: "Endereço de Atendimento",
-      value: value: `${site.address.street}`,
+      value: `${site.address.street}`,
       href: site.address.mapsUrl,
     },
     {
