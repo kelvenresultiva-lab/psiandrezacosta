@@ -35,6 +35,14 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   title: `${site.name} | Psicóloga Clínica em ${site.city}`,
   description: site.metaDescription,
+  icons: {
+    icon: "/images/logo-andreza-costa.png",
+  },
+  openGraph: {
+    title: `${site.name} | Psicóloga Clínica em ${site.city}`,
+    description: site.metaDescription,
+    images: ["/images/logo-andreza-costa.png"],
+  },
 };
 
 export default function RootLayout({
