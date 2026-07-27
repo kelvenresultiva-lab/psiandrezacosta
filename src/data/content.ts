@@ -38,12 +38,13 @@ export function whatsappLink(customMessage?: string) {
 }
 
 export const nav = [
-  { label: "Início", href: "#hero" },
-  { label: "Especialidades", href: "#especialidades" },
-  { label: "Sobre mim", href: "#sobre" },
-  { label: "Consultório", href: "#consultorio" },
-  { label: "Como funciona", href: "#processo" },
-  { label: "FAQ", href: "#faq" },
+  { label: "Início", href: "/#hero" },
+  { label: "Especialidades", href: "/#especialidades" },
+  { label: "Sobre mim", href: "/#sobre" },
+  { label: "Consultório", href: "/#consultorio" },
+  { label: "Como funciona", href: "/#processo" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const header = {

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { header, nav, site, whatsappLink } from "@/data/content";
 import Button from "@/components/Button";
@@ -9,7 +10,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 h-15 bg-white">
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-6 py-4">
-        <a href="#hero" className="flex items-center">
+        <Link href="/#hero" className="flex items-center">
           <Image
             src="/images/logo-andreza-costa.png"
             alt={site.name}
@@ -18,7 +19,7 @@ export default function Header() {
             className="h-[86px] w-auto -mt-6"
             priority
           />
-        </a>
+        </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {nav.map((item) => (
             <a key={item.href}
