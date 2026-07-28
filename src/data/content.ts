@@ -4,12 +4,10 @@
 // Estrutura da página segue o modelo de referência (Header > Hero+selo >
 // Especialidades > Sobre mim > Consultório+Depoimentos > Como funciona >
 // Benefícios > FAQ > Mapa > Footer).
-
 export const site = {
   name: "Andreza Costa",
   fullName: "Andreza Costa",
   role: "Psicóloga Clínica e Social",
-  // TODO: Andreza ainda não enviou o número do CRP — substituir assim que ela mandar.
   crp: "Psicóloga Clínica — CRP a confirmar",
   city: "Sarzedo",
   state: "MG",
@@ -31,12 +29,10 @@ export const site = {
   metaDescription:
     "Andreza Costa é psicóloga clínica e social em Sarzedo (MG), com atendimento presencial e online para todo o Brasil. Acompanhamento psicológico para mulheres, adolescentes, jovens e para a comunidade LGBTQIAPN+.",
 } as const;
-
 export function whatsappLink(customMessage?: string) {
   const message = encodeURIComponent(customMessage ?? site.whatsappMessage);
   return `https://wa.me/${site.whatsappNumber}?text=${message}`;
 }
-
 export const nav = [
   { label: "Início", href: "/#hero" },
   { label: "Especialidades", href: "/#especialidades" },
@@ -46,11 +42,9 @@ export const nav = [
   { label: "FAQ", href: "/#faq" },
   { label: "Blog", href: "/blog" },
 ] as const;
-
 export const header = {
   ctaLabel: "Vamos conversar?",
 } as const;
-
 export const hero = {
   eyebrow: site.crp,
   greeting: "Olá, sou",
@@ -70,13 +64,10 @@ export const hero = {
     alt: "Andreza Costa, psicóloga clínica e social, sorrindo sentada em um ambiente acolhedor",
   },
 } as const;
-
-// TODO: valor fictício até a Jadi enviar um número real (pessoas acompanhadas, anos de atuação etc.).
 export const heroStat = {
   value: "+200",
   label: "pessoas acompanhadas",
 } as const;
-
 export const heroMobile = {
   eyebrow: "PSICÓLOGA CLÍNICA",
   title: "Andreza Costa",
@@ -87,20 +78,19 @@ export const heroMobile = {
     alt: "Andreza Costa, psicóloga clínica, sentada em uma poltrona em um ambiente acolhedor",
   },
 } as const;
-
 export const specialties = {
   items: [
     {
       icon: "Flower2",
       title: "Terapia para mulheres em sobrecarga",
       description:
-        "Por meio de sessões semanais, presenciais ou online, com cerca de 50 minutos de duração, acompanho mulheres em momentos de sobrecarga, ansiedade ou relações difíceis. Através da escuta clínica, é possível compreender a origem do que incomoda e caminhar, no seu próprio tempo, para um processo de redescoberta de si mesma.",
+        "Se você sente uma sobrecarga constante, dificuldade em dizer não, culpa ao priorizar suas próprias necessidades, ansiedade no dia a dia ou desgaste em relações que já não fazem sentido, a terapia pode te ajudar. Por meio de sessões semanais, presenciais ou online, com cerca de 50 minutos de duração, meu trabalho é pautado na teoria psicanalítica e também na psicoterapia breve — que atua sobre demandas específicas, buscando a resolução mais rápida das questões, sempre respeitando o seu tempo em um processo de redescoberta de si mesma.",
     },
     {
       icon: "Sparkle",
       title: "Terapia para adolescentes e jovens",
       description:
-        "Adolescentes e jovens podem enfrentar dificuldades próprias dessa fase da vida, como ansiedade, insegurança e conflitos nas relações. Por meio do acompanhamento psicológico, presencial ou online, é possível desenvolver autoconhecimento, fortalecer a autoestima e lidar melhor com os desafios emocionais típicos da adolescência e da juventude.",
+        "Adolescentes e jovens podem enfrentar dificuldades próprias dessa fase da vida, como ansiedade, insegurança e conflitos nas relações. Meu trabalho com essa faixa etária é pautado na abordagem cognitivo-comportamental, Análise do Comportamento (ABA) e treinamento parental, com a família integrada ao processo — seja participando de sessões, seja em encontros individuais com os responsáveis.",
     },
     {
       icon: "Rainbow",
@@ -110,28 +100,24 @@ export const specialties = {
     },
   ],
 } as const;
-
 export const about = {
   eyebrow: "SOBRE MIM",
   greeting: "Olá, sou",
   title: "Andreza Costa",
   paragraphs: [
-    "Sou psicóloga clínica e social, e acredito que a psicologia é, antes de tudo, um exercício de escuta ética e sem julgamento. Disponibilizo um espaço de cuidado, afeto e compromisso com a singularidade de cada pessoa que acompanho.",
+    "Sou psicóloga clínica e escolar, pós-graduada em Análise do Comportamento Aplicada ao Autismo (ABA) e em Psicologia Escolar e Educacional. Atendo de forma presencial e online.",
+    "Além da clínica, também sou palestrante, pesquisadora e especialista em elaboração de projetos. Sou idealizadora de projetos sociais e movimentos na cidade de Sarzedo e região, voltados ao acolhimento e atendimento de mulheres vítimas de violência doméstica e de pessoas em situação de vulnerabilidade.",
     "Atendo mulheres em momentos de sobrecarga, ansiedade, relações difíceis ou redescoberta de si; acompanho adolescentes e jovens com sensibilidade às fases de transição e aos desafios emocionais da juventude; e caminho ao lado de adolescentes, adultos e idosos da comunidade LGBTQIAPN+ em busca de autonomia, identidade e autoconhecimento.",
-    "Minha formação reúne a Psicologia Clínica e Social a uma Pós-graduação em Saúde Pública, além das certificações em Mediação de Conflitos e em Escuta Especializada — um olhar que une a clínica ao compromisso social com quem eu acompanho.",
   ],
   formationCard: {
     label: "Formação",
-    text: "Psicóloga Clínica e Social, Pós-Graduada em Saúde Pública.",
+    text: "Psicóloga Clínica e Escolar, Pós-Graduada em ABA e em Psicologia Escolar e Educacional.",
   },
   image: {
-    src: "/images/jadi-sobre.png",
+    src: "/images/jadi-sobre.jpeg",
     alt: "Retrato de Andreza Costa, psicóloga clínica e social",
   },
 } as const;
-
-// TODO: fotos ilustrativas (geradas por IA) até a Jadi enviar fotos reais do
-// próprio consultório — substituir os arquivos em /public/images quando ela mandar.
 export const gallery = {
   id: "consultorio",
   eyebrow: "AMBIENTE SEGURO E DE FÁCIL ACESSO",
@@ -151,9 +137,6 @@ export const gallery = {
     },
   ],
 } as const;
-
-// TODO: depoimentos fictícios — a Jadi ainda não enviou depoimentos reais de
-// pacientes. Substituir por avaliações reais (com autorização) antes de publicar.
 export const testimonials = {
   eyebrow: "DEPOIMENTOS",
   title: "O que dizem sobre o meu trabalho",
@@ -176,7 +159,6 @@ export const testimonials = {
     },
   ],
 } as const;
-
 export const process = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO",
   title: "Um processo claro para sua evolução",
@@ -184,13 +166,11 @@ export const process = {
     "Meu trabalho começa com um primeiro contato acolhedor, onde você tira suas dúvidas e escolhe o melhor horário para a sua primeira sessão, presencial ou online. A partir daí, seguimos com uma escuta atenta e sem julgamento sobre a sua história e o que te trouxe até aqui.",
     "Com base nesse acolhimento inicial, construímos juntas um direcionamento terapêutico alinhado às suas necessidades. O acompanhamento segue com sessões regulares e devolutivas ao longo do processo, sempre respeitando o seu tempo e a sua singularidade.",
   ],
-  // TODO: percentuais fictícios até a Jadi enviar dados reais — mantidos apenas como recurso visual.
   progressBars: [
     { label: "Ambiente acolhedor", value: 100 },
     { label: "Compromisso com o processo", value: 97 },
   ],
   ctaLabel: "Vamos conversar?",
-  // TODO: valor fictício até a Jadi enviar o número real de atendimentos realizados.
   stat: {
     value: "+500",
     label: "Atendimentos realizados",
@@ -200,7 +180,6 @@ export const process = {
     alt: "Andreza Costa sentada, anotando durante uma sessão de atendimento",
   },
 } as const;
-
 export const reasons = {
   eyebrow: "ALGUNS BENEFÍCIOS DA TERAPIA",
   title: "Benefícios do acompanhamento psicológico",
@@ -233,7 +212,6 @@ export const reasons = {
     },
   ],
 } as const;
-
 export const faq = {
   eyebrow: "DÚVIDAS FREQUENTES",
   title: "Ainda tem dúvidas?",
@@ -274,7 +252,6 @@ export const faq = {
     },
   ],
 } as const;
-
 export const footer = {
   about:
     "Espaço de escuta psicológica com ética, afeto e compromisso com a sua singularidade.",

@@ -85,7 +85,7 @@ export default function PostsTable({ initialPosts }: { initialPosts: BlogPost[] 
                   onClick={() => togglePublished(post)}
                   className={`rounded-full px-3 py-1 font-lato text-xs font-semibold uppercase tracking-wide transition-colors disabled:opacity-60 ${
                     post.published
-                      ? "bg-green-100 text-green-700 hover:bg-green-200"
+                      ? "bg-[#D57271]/15 text-[#D57271] hover:bg-[#D56B73]/25"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                   }`}
                 >
