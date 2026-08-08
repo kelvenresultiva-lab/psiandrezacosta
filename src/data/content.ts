@@ -114,7 +114,7 @@ export const about = {
     text: "Psicóloga Clínica e Escolar, Pós-Graduada em ABA e em Psicologia Escolar e Educacional.",
   },
   image: {
-    src: "/images/jadi-sobre.jpeg",
+    src: "/images/jadi-sobre.png",
     alt: "Retrato de Andreza Costa, psicóloga clínica e social",
   },
 } as const;
