@@ -41,8 +41,10 @@ export default function Hero() {
             <span className="h-px flex-1 bg-gold-bright/40" />
           </div>
 
-          <p className="mx-auto mt-5 max-w-xs font-heebo text-sm font-medium uppercase tracking-[1.5px] text-ink/80">
-            {heroMobile.tagline}
+          {/* Como o bloco é puxado para cima pela margem negativa, crescer
+              aqui embaixo não desalinha o topo sobre a foto. */}
+          <p className="mx-auto mt-5 max-w-sm font-heebo text-[15px] font-light leading-relaxed text-ink/75">
+            {heroMobile.description}
           </p>
 
           <div className="mt-7 flex justify-center">
@@ -72,8 +74,12 @@ export default function Hero() {
           </Reveal>
 
           <Reveal direction="up" delay={100}>
+            {/* Saudação e nome em linhas próprias. Inline, "Olá, sou Andreza
+                Costa" não cabe em 56px na largura da coluna e quebrava no meio
+                do nome, deixando só "Costa" na segunda linha. */}
             <h1 className="max-w-2xl font-mosseta text-[56px] leading-[1.15] text-ink">
-              {hero.greeting} <span className="text-gold-bright">{hero.name}</span>
+              <span className="block">{hero.greeting}</span>
+              <span className="block text-gold-bright">{hero.name}</span>
             </h1>
           </Reveal>
 
@@ -99,11 +105,15 @@ export default function Hero() {
             </ul>
           </Reveal>
 
+          {/* Só o respiro lateral encolhe (px-8 -> px-5); o corpo do texto
+              continua em 15px. */}
           <Reveal direction="up" delay={400} className="flex flex-wrap gap-4">
-            <Button href={whatsappLink()} variant="outline">
+            <Button href={whatsappLink()} variant="outline" className="!px-5">
               {hero.ctaLabel}
             </Button>
-            <Button href={hero.ctaSecondaryHref}>{hero.ctaSecondaryLabel}</Button>
+            <Button href={hero.ctaSecondaryHref} className="!px-5">
+              {hero.ctaSecondaryLabel}
+            </Button>
           </Reveal>
         </div>
       </div>

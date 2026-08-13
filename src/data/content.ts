@@ -71,7 +71,8 @@ export const heroStat = {
 export const heroMobile = {
   eyebrow: "PSICÓLOGA CLÍNICA",
   title: "Andreza Costa",
-  tagline: "UM ESPAÇO DE ESCUTA PARA VOCÊ SE ENCONTRAR.",
+  description:
+    "A terapia é um convite para olhar para si com mais cuidado, compreender seus conflitos e descobrir novas possibilidades para a sua vida.",
   ctaLabel: "Mais informações",
   image: {
     src: "/images/jadi-hero-mobile-2.png",
